@@ -17,7 +17,7 @@ namespace BMICalculator
 
         static double GetWeight()
         {
-            Console.WriteLine("Enter Your Weight In Meters: ");
+            Console.WriteLine("Enter Your Weight In kilograms: ");
             double weight = Double.Parse(Console.ReadLine());
             return weight;
         }
