@@ -43,16 +43,21 @@ namespace BMICalculator
             double kilogramWeight = weight * 0.045392;
             double bmi = kilogramWeight / (meterHeight * meterHeight);
             return bmi;
+            labelBmi.Text = bmi.ToString();
+            labelBmi.Show();
+            labelBmiText.Show();
+            labelYouAre.Show();
+            labelYouAreText.Show();
         // Determines yout weight according to your BMI
         if(Convert.ToDouble(bmi) < 18.5)
         {
             LabelYouAre.Text = "Underweight";
         }
-        else if (Convert.ToDouble(bmi) >= 18.5 && Convert.ToDouble(BMI) < 24.9);
+        else if (Convert.ToDouble(bmi) >= 18.5 && Convert.ToDouble(bmi) < 24.9)
         {
             labelYouAre.Text = "Normal";
         }
-        else if (Convert.ToDouble(bmi) >= 25 && Convert.ToDouble(BMI) < 29.9
+        else if (Convert.ToDouble(bmi) >= 25 && Convert.ToDouble(bmi) < 29.9)
         {
             LabelYouAre.Text = "Overweight";
         }       
