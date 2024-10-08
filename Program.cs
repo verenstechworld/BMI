@@ -37,19 +37,19 @@ namespace BMICalculator
         {
             if (bmi < 18.5)
             {
-                return "You are underweight.";
+                return "You are underweight. Please Take some multivitamin to get your ideal weight.";
             }
             else if (bmi >= 18.5 && bmi < 24.9)
             {
-                return "You have a normal weight.";
+                return "You have a normal weight. Good, Please maintain your ideal weight.";
             }
             else if (bmi >= 25 && bmi < 29.9)
             {
-                return "You are overweight.";
+                return "You are overweight. Please diet and do some excercise.";
             }
             else
             {
-                return "You are obese.";
+                return "You are obese. See a doctor or dietician for some consultation.";
             }
         }
     }
