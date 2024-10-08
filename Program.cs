@@ -1,4 +1,6 @@
 ﻿using System;
+using System.ComponentModel.Design;
+using System.Reflection.Emit;
 
 namespace BMICalculator
 {
@@ -12,7 +14,7 @@ namespace BMICalculator
             double height = GetHeight();
 
             double BMI = calculateBMI(weight, height);
-            Console.WriteLine("Your final BMI is: " + Math.Round(BMI,2));
+            Console.WriteLine("Your final BMI is: " + Math.Round(BMI, 2));
         }
 
         static double GetWeight()
@@ -41,12 +43,27 @@ namespace BMICalculator
             double kilogramWeight = weight * 0.045392;
             double bmi = kilogramWeight / (meterHeight * meterHeight);
             return bmi;
+        // Determines yout weight according to your BMI
+        if(Convert.ToDouble(bmi) < 18.5)
+        {
+            LabelYouAre.Text = "Underweight";
+        }
+        else if (Convert.ToDouble(bmi) >= 18.5 && Convert.ToDouble(BMI) < 24.9);
+        {
+            labelYouAre.Text = "Normal";
+        }
+        else if (Convert.ToDouble(bmi) >= 25 && Convert.ToDouble(BMI) < 29.9
+        {
+            LabelYouAre.Text = "Overweight";
+        }       
+        else if (Convert.ToDouble(bmi) >= 30)
+        {
+            LabelYouare.Text = "Obese";
         }
 
-        // Determines yout weight according to your bmi
-        {
-        else if (Convert.todouble(bmi))
+
     }
+
 }
 
 
