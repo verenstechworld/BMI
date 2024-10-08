@@ -42,6 +42,10 @@ namespace BMICalculator
             double bmi = kilogramWeight / (meterHeight * meterHeight);
             return bmi;
         }
+
+        // Determines yout weight according to your bmi
+        {
+        else if (Convert.todouble(bmi))
     }
 }
 
