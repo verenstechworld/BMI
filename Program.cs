@@ -21,19 +21,22 @@ namespace BMICalculator
 
             // Display the result
             Console.WriteLine($"Your BMI is: {bmi:F2}");
-            Console.WriteLine(GetBMICategory(bmi));
+
+            string response = GetBMICategory(bmi);
+
+            Console.WriteLine(response);
 
             // Wait for user input before closing
             Console.WriteLine("Press any key to exit.");
             Console.ReadKey();
         }
-
-        static double CalculateBMI(double weight, double height)
+        private static double CalculateBMI(double weight, double height)
         {
-            return weight / (height * height);
+            double result = weight / (height * height);
+            return result;
         }
 
-        static string GetBMICategory(double bmi)
+        private static string GetBMICategory(double bmi)
         {
             if (bmi < 18.5)
             {
